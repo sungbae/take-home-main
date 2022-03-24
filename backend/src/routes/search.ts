@@ -1,5 +1,5 @@
-import { RecipeModel, Ingredient } from "../models"
 import { Request, Response } from "express"
+import { Ingredient, RecipeModel } from "../models"
 
 const allIngredients = ["flour", "sugar", "salt", "butter", "milk"]
 

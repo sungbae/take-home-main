@@ -1,8 +1,8 @@
-import express from "express"
 import bodyParser from "body-parser"
+import express from "express"
 import http from "http"
 import { createAndConnectToServer } from "./db"
-import { searchMiddleware, recipeMiddleware } from "./routes"
+import { recipeMiddleware, searchMiddleware } from "./routes"
 
 const appStartup = async (): Promise<void> => {
   await createAndConnectToServer()
@@ -11,6 +11,7 @@ const appStartup = async (): Promise<void> => {
   app.use(bodyParser.json())
   app.use(bodyParser.urlencoded({ extended: false }))
   // create our routes
+  app.get("/api/recipe/:id", recipeMiddleware)
   app.post("/api/search", searchMiddleware)
   // create a server
   const httpServer = new http.Server(app)

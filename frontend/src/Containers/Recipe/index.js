@@ -24,7 +24,6 @@ class Recipe extends Component {
   }
 
   render() {
-    console.log(this.state.fetchedRecipeId)
     return (
       <>
         {this.props.selectedRecipeId ? (

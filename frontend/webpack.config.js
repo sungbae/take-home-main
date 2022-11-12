@@ -19,6 +19,9 @@ module.exports = {
   resolve: {
     extensions: [".js", ".json"],
     plugins: [PnpWebpackPlugin],
+    alias: {
+      "react-dom": "@hot-loader/react-dom",
+    },
   },
   resolveLoader: {
     plugins: [PnpWebpackPlugin.moduleLoader(module)],
@@ -26,6 +29,7 @@ module.exports = {
   output: {
     path: buildDir,
     filename: "[name].bundle.js",
+    // publicPath: "/",
   },
   module: {
     rules: [
@@ -41,6 +45,7 @@ module.exports = {
     ],
   },
   devServer: {
+    // historyApiFallback: true,
     port: 3000,
     contentBase: staticDir,
     publicPath: "/",

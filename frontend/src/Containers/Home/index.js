@@ -121,18 +121,12 @@ const mapStateToProps = (state) => {
   return { ...search }
 }
 
-// TODO: you can remove object.assign I think
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators(
-    Object.assign(
-      {},
-      {
-        searchRecipes: actions.searchRecipes,
-      },
-      {
-        selectRecipe: actions.selectRecipe,
-      }
-    ),
+    {
+      searchRecipes: actions.searchRecipes,
+      selectRecipe: actions.selectRecipe,
+    },
     dispatch
   )
 

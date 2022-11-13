@@ -32,10 +32,10 @@ class Modal extends Component {
           <ModalOverlay onClick={() => this.closeModal()}></ModalOverlay>
           <ModalContainer>
             <ModalHeader>
-              <ModalTitle>{this.props.title}</ModalTitle>
+              <ModalTitle>{this.props.modalProps.title}</ModalTitle>
               <ModalClose onClick={() => this.closeModal()}>X</ModalClose>
             </ModalHeader>
-            <ModalBody>{this.props.children}</ModalBody>
+            <ModalBody>{this.props.modalProps.body}</ModalBody>
           </ModalContainer>
         </ModalBlock>
       </>
@@ -43,8 +43,9 @@ class Modal extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
-  return { ...state.modal, ...ownProps }
+const mapStateToProps = (state) => {
+  const { modal } = state
+  return { ...modal }
 }
 
 const mapDispatchToProps = (dispatch) =>

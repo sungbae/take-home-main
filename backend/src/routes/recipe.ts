@@ -14,16 +14,17 @@ export const recipeMiddleware = async (
   try {
     const foundRecipe = await RecipeModel.findById(req.params.id)
     if (!foundRecipe) {
-      res.sendStatus(404).send({
-        message: `Could not find recipe with id ${req.params.id}`,
-      })
+      res.sendStatus(404).send(`Could not find recipe with id ${req.params.id}`)
     }
     const builtRecipe = buildRecipeRes(foundRecipe)
     res.send(builtRecipe)
   } catch (e) {
     // log all details of error somewhere else
-    res.status(500).send({
-      message: `Server side failure. Unable to find recipe for id ${req.params.id}.`, // display user friendly message
-    })
+    // display user friendly message
+    res
+      .status(500)
+      .send(
+        `Server side failure. Unable to find recipe for id ${req.params.id}.`
+      )
   }
 }

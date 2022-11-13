@@ -29,11 +29,12 @@ export const executeSearch = async (name, ingredients) => {
     },
     body: JSON.stringify({ name, ingredients }),
   })
-  const data = await response.json()
+
   if (!response.ok) {
-    throw new Error(data.message)
+    throw new Error(await response.text())
   }
-  return data
+
+  return response.json()
 }
 
 // TODO: fix action

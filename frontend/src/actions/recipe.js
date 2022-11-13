@@ -22,11 +22,10 @@ const fetchRecipeFailure = (payload) => ({
 
 export const executeSearch = async (id) => {
   const response = await fetch("/api/recipe/" + id)
-  const data = await response.json()
   if (!response.ok) {
-    throw new Error(data.message)
+    throw new Error(await response.text())
   }
-  return data
+  return response.json()
 }
 
 export const fetchRecipe = (id) => {

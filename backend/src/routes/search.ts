@@ -21,16 +21,33 @@ export const searchMiddleware = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-  const { name, ingredients } = req.body
-  const query: Query = {}
-  if (name) {
-    query.name = new RegExp(escapeRegex(name), "gi")
+  try {
+    const { name, ingredients } = req.body
+    const query: Query = {}
+    if (name) {
+      query.name = new RegExp(escapeRegex(name), "gi")
+    }
+    if (ingredients) {
+      const whatsLeft = allIngredients.filter(
+        (ing) => !ingredients.includes(ing)
+      )
+      query["ingredients.name"] = { $nin: whatsLeft }
+    }
+
+    const foundRecipes = await RecipeModel.find(query)
+    const builtRecipes = foundRecipes.map(recipeCleaner)
+
+    if (builtRecipes.length === 0) {
+      res.status(404).send({
+        message:
+          "No recipes found! Try a different search term and/or ingredients",
+      })
+    }
+    res.send(builtRecipes)
+  } catch (e) {
+    // log all details of error somewhere else
+    res.status(500).send({
+      message: "Server side failure. Unable to search for recipes.", // display user friendly message
+    })
   }
-  if (ingredients) {
-    const whatsLeft = allIngredients.filter((ing) => !ingredients.includes(ing))
-    query["ingredients.name"] = { $nin: whatsLeft }
-  }
-  const foundRecipes = await RecipeModel.find(query)
-  const builtRecipes = foundRecipes.map(recipeCleaner)
-  res.send(builtRecipes)
 }

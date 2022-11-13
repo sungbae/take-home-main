@@ -22,8 +22,11 @@ const fetchRecipeFailure = (payload) => ({
 
 export const executeSearch = async (id) => {
   const response = await fetch("/api/recipe/" + id)
-  const fetchResult = await response.json()
-  return fetchResult
+  const data = await response.json()
+  if (!response.ok) {
+    throw new Error(data.message)
+  }
+  return data
 }
 
 export const fetchRecipe = (id) => {
@@ -31,6 +34,6 @@ export const fetchRecipe = (id) => {
     dispatch(fetchingRecipe())
     return executeSearch(id)
       .then((res) => dispatch(fetchRecipeSuccess(res)))
-      .catch((err) => dispatch(fetchRecipeFailure(err)))
+      .catch((err) => dispatch(fetchRecipeFailure({ message: err.message })))
   }
 }

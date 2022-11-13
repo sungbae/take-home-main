@@ -8,3 +8,8 @@ export const BlueButton = styled(Button)`
     background-color: blue;
   }
 `
+export const ErrorMessage = styled.div`
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+`

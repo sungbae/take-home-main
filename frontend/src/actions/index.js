@@ -1,3 +1,2 @@
-export * from "./modal"
-export * from "./recipe"
 export * from "./search"
+export * from "./recipe"

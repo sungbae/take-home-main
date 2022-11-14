@@ -4,6 +4,8 @@ import http from "http"
 import { createAndConnectToServer } from "./db"
 import { recipeMiddleware, searchMiddleware } from "./routes"
 
+const PORT = process.env.PORT || 4000
+
 const appStartup = async (): Promise<void> => {
   await createAndConnectToServer()
   const app = express()
@@ -14,9 +16,10 @@ const appStartup = async (): Promise<void> => {
   app.get("/api/recipe/:id", recipeMiddleware)
   app.post("/api/search", searchMiddleware)
   // create a server
+
   const httpServer = new http.Server(app)
-  httpServer.listen(4000, "0.0.0.0", () => {
-    console.log("now running on 4000")
+  httpServer.listen(+PORT, "0.0.0.0", () => {
+    console.log("now running on " + PORT)
   })
 }
 

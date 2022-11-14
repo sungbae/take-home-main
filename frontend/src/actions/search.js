@@ -22,7 +22,7 @@ export const selectRecipe = (selectedRecipeId) => {
 }
 
 export const executeSearch = async (name, ingredients) => {
-  const response = await fetch("/api/search", {
+  const response = await fetch("-api/api/search", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

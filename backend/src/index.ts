@@ -7,6 +7,7 @@ import { recipeMiddleware, searchMiddleware } from "./routes"
 const PORT = process.env.PORT || 4000
 
 const appStartup = async (): Promise<void> => {
+  console.log("i made it to the first line in appstartup")
   await createAndConnectToServer()
   const app = express()
   // add parsers for the body

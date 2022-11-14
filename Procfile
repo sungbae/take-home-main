@@ -1,1 +1,0 @@
-web: sh -c 'yarn install && yarn start'

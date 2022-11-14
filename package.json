@@ -14,8 +14,8 @@
     "vsc": "sdks vscode",
     "build": "yarn workspaces foreach -piv --topological-dev -j 2 run build",
     "lint": "yarn workspaces foreach -ptv -j 2 run lint",
-    "dev": "yarn workspaces foreach -piv -j 2 run dev",
-    "start": "yarn workspaces foreach -piv -j 2 run start"
+    "start": "yarn workspaces foreach -piv -j 2 run start",
+    "postinstall": "yarn workspaces foreach -piv -j 2 run postinstall"
   },
   "devDependencies": {
     "@babel/core": "7.14.8",

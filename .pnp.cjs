@@ -10553,6 +10553,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["esbuild-loader", "virtual:74608ea472d200eb7aafac67a4b3d3d2cf07a6c6c620ff30471520eefd5edeb503c9ed6dc628bbcdf22fc5d8912bba69388be38679bf24ebc891cebaa92bdb72#npm:2.13.1"],
             ["eslint", "npm:6.8.0"],
             ["eslint-plugin-react", "virtual:74608ea472d200eb7aafac67a4b3d3d2cf07a6c6c620ff30471520eefd5edeb503c9ed6dc628bbcdf22fc5d8912bba69388be38679bf24ebc891cebaa92bdb72#npm:7.19.0"],
+            ["express", "npm:4.17.1"],
             ["html-webpack-plugin", "virtual:74608ea472d200eb7aafac67a4b3d3d2cf07a6c6c620ff30471520eefd5edeb503c9ed6dc628bbcdf22fc5d8912bba69388be38679bf24ebc891cebaa92bdb72#npm:3.2.0"],
             ["pnp-webpack-plugin", "npm:1.6.4"],
             ["react", "npm:17.0.2"],

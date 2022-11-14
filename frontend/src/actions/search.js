@@ -22,16 +22,13 @@ export const selectRecipe = (selectedRecipeId) => {
 }
 
 export const executeSearch = async (name, ingredients) => {
-  const response = await fetch(
-    "https://sung-take-home-assignment-api.herokuapp.com/api/search",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, ingredients }),
-    }
-  )
+  const response = await fetch("/api/search", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ name, ingredients }),
+  })
 
   if (!response.ok) {
     throw new Error(await response.text())

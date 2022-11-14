@@ -9,11 +9,13 @@ const PORT = process.env.PORT || 4000
 const appStartup = async (): Promise<void> => {
   console.log("i made it to the first line in appstartup")
   await createAndConnectToServer()
+  console.log("line 12")
   const app = express()
+  console.log("line 14")
   // add parsers for the body
   app.use(bodyParser.json())
   app.use(bodyParser.urlencoded({ extended: false }))
-
+  console.log("line 18")
   // create our routes
   app.get("/api/recipe/:id", recipeMiddleware)
   app.post("/api/search", searchMiddleware)

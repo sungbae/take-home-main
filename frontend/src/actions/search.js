@@ -29,12 +29,8 @@ export const executeSearch = async (name, ingredients) => {
     },
     body: JSON.stringify({ name, ingredients }),
   })
-
-  if (!response.ok) {
-    throw new Error(await response.text())
-  }
-
-  return response.json()
+  const searchResults = await response.json()
+  return searchResults
 }
 
 // TODO: fix action
@@ -43,6 +39,6 @@ export const searchRecipes = (name, ingredients) => {
     dispatch(fetchingSearch())
     return executeSearch(name, ingredients)
       .then((res) => dispatch(fetchedSearch(res)))
-      .catch((err) => dispatch(failedSearch({ message: err.message })))
+      .catch((err) => dispatch(failedSearch(err)))
   }
 }

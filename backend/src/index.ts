@@ -14,11 +14,12 @@ const appStartup = async (): Promise<void> => {
   app.use(bodyParser.json())
   app.use(bodyParser.urlencoded({ extended: false }))
   // create our routes
-  const corsOptions = {
-    origin: "https://sung-take-home-assignment.herokuapp.com",
-  }
-  app.get("/api/recipe/:id", cors(corsOptions), recipeMiddleware)
-  app.post("/api/search", cors(corsOptions), searchMiddleware)
+  // const corsOptions = {
+  //   origin: "https://sung-take-home-assignment.herokuapp.com",
+  // }
+  app.use(cors())
+  app.get("/api/recipe/:id", recipeMiddleware)
+  app.post("/api/search", searchMiddleware)
   // create a server
 
   const httpServer = new http.Server(app)

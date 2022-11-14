@@ -1,7 +1,7 @@
 const path = require("path")
 const express = require("express")
 const app = express()
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000
 
 const staticDir = path.resolve(__dirname, "static")
 const buildTemplate = path.resolve(staticDir, "index-template.html")

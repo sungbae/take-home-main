@@ -15,7 +15,8 @@
     "build": "yarn workspaces foreach -piv --topological-dev -j 2 run build",
     "lint": "yarn workspaces foreach -ptv -j 2 run lint",
     "start": "yarn workspaces foreach -piv -j 2 run start",
-    "prod": "yarn workspaces foreach -piv -j 2 run prod"
+    "prod-ui": "yarn workspaces foreach -piv -j 2 run prod-ui",
+    "prod-api": "yarn workspaces foreach -piv -j 2 run prod-api"
   },
   "devDependencies": {
     "@babel/core": "7.14.8",

@@ -21,7 +21,9 @@ const fetchRecipeFailure = (payload) => ({
 })
 
 export const executeSearch = async (id) => {
-  const response = await fetch("-api/api/recipe/" + id)
+  const response = await fetch(
+    "https://sung-take-home-assignment-api.herokuapp.com/api/recipe/" + id
+  )
   if (!response.ok) {
     throw new Error(await response.text())
   }

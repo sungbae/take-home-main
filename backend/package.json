@@ -10,8 +10,7 @@
     "build": "tsc",
     "lint": "eslint src/ --ext .ts",
     "start": "nodemon -e ts --exec yarn dev-be",
-    "postinstall": "tsc",
-    "prod-api": "node dist/index.js",
+    "prod-api": "yarn build && node dist/index.js",
     "dev-be": "node -r esbuild-register --inspect=0.0.0.0:9229 src/index.ts"
   },
   "dependencies": {

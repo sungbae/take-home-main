@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server",
-    "postinstall": "webpack -p",
+    "prod": "NODE_ENV=production node server.js",
     "build": "webpack",
     "lint": "eslint src/ --ext .js,.jsx",
     "dev-be": "node --inspect -r ts-node/register server/index.ts",

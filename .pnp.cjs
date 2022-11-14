@@ -576,6 +576,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:3.4.35"
       ],
       [
+        "@types/cors",
+        "npm:2.8.12"
+      ],
+      [
         "@types/cross-spawn",
         "npm:6.0.2"
       ],
@@ -1434,6 +1438,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "core-util-is",
         "npm:1.0.3"
+      ],
+      [
+        "cors",
+        "npm:2.8.5"
       ],
       [
         "cosmiconfig",
@@ -9823,6 +9831,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/cors", [
+        ["npm:2.8.12", {
+          "packageLocation": "./.yarn/cache/@types-cors-npm-2.8.12-ff52e8e514-8c45f112c7.zip/node_modules/@types/cors/",
+          "packageDependencies": [
+            ["@types/cors", "npm:2.8.12"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/cross-spawn", [
         ["npm:6.0.2", {
           "packageLocation": "./.yarn/cache/@types-cross-spawn-npm-6.0.2-f5d63b3325-fa9edd3217.zip/node_modules/@types/cross-spawn/",
@@ -10516,12 +10533,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/plugin-transform-typescript", "virtual:394fe46ccea37a470537b05fead138c1003a2fd67acc4da4ee61d303b0c8f3720d6b97ddc753f287946747d143d3432ac85a1df0bc7e95bdb67100a63bc11007#npm:7.12.1"],
             ["@babel/preset-env", "virtual:394fe46ccea37a470537b05fead138c1003a2fd67acc4da4ee61d303b0c8f3720d6b97ddc753f287946747d143d3432ac85a1df0bc7e95bdb67100a63bc11007#npm:7.12.11"],
             ["@babel/preset-typescript", "virtual:394fe46ccea37a470537b05fead138c1003a2fd67acc4da4ee61d303b0c8f3720d6b97ddc753f287946747d143d3432ac85a1df0bc7e95bdb67100a63bc11007#npm:7.12.7"],
+            ["@types/cors", "npm:2.8.12"],
             ["@types/express", "npm:4.17.3"],
             ["@types/node", "npm:14.17.15"],
             ["@typescript-eslint/eslint-plugin", "virtual:394fe46ccea37a470537b05fead138c1003a2fd67acc4da4ee61d303b0c8f3720d6b97ddc753f287946747d143d3432ac85a1df0bc7e95bdb67100a63bc11007#npm:2.24.0"],
             ["@typescript-eslint/parser", "virtual:394fe46ccea37a470537b05fead138c1003a2fd67acc4da4ee61d303b0c8f3720d6b97ddc753f287946747d143d3432ac85a1df0bc7e95bdb67100a63bc11007#npm:2.24.0"],
             ["babel-eslint", "virtual:394fe46ccea37a470537b05fead138c1003a2fd67acc4da4ee61d303b0c8f3720d6b97ddc753f287946747d143d3432ac85a1df0bc7e95bdb67100a63bc11007#npm:10.1.0"],
             ["body-parser", "npm:1.19.0"],
+            ["cors", "npm:2.8.5"],
             ["esbuild", "npm:0.12.18"],
             ["esbuild-register", "npm:2.6.0"],
             ["eslint", "npm:6.8.0"],
@@ -12926,6 +12945,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/core-util-is-npm-1.0.3-ca74b76c90-9de8597363.zip/node_modules/core-util-is/",
           "packageDependencies": [
             ["core-util-is", "npm:1.0.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["cors", [
+        ["npm:2.8.5", {
+          "packageLocation": "./.yarn/cache/cors-npm-2.8.5-c9935a2d12-ced838404c.zip/node_modules/cors/",
+          "packageDependencies": [
+            ["cors", "npm:2.8.5"],
+            ["object-assign", "npm:4.1.1"],
+            ["vary", "npm:1.1.2"]
           ],
           "linkType": "HARD",
         }]

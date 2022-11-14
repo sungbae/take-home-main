@@ -2378,11 +2378,11 @@ __metadata:
   linkType: hard
 
 "@types/find-package-json@npm:^1.1.1":
-  version: 1.2.2
-  resolution: "@types/find-package-json@npm:1.2.2"
+  version: 1.2.3
+  resolution: "@types/find-package-json@npm:1.2.3"
   dependencies:
     "@types/node": "*"
-  checksum: 578e0ddec122b0e27e9177b146883bb381abd5dd1876a96531a2c4c9eca214f724adda90af894f28f181a7cc93fec7804beaf7dccd758f45dc2856bd7f998645
+  checksum: d80dcfb2ae71cffb3e601ce5acc8952160ec51acc79d0ac3e5d253633bee30f7062d72ce0d15ed94a70932912bcc386e5e39f97a9b8e19d9ec8600380630ce42
   languageName: node
   linkType: hard
 
@@ -6825,7 +6825,14 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.1.10, graceful-fs@npm:^4.1.11, graceful-fs@npm:^4.1.15, graceful-fs@npm:^4.2.6":
+"graceful-fs@npm:^4.1.10":
+  version: 4.2.10
+  resolution: "graceful-fs@npm:4.2.10"
+  checksum: 3f109d70ae123951905d85032ebeae3c2a5a7a997430df00ea30df0e3a6c60cf6689b109654d6fdacd28810a053348c4d14642da1d075049e6be1ba5216218da
+  languageName: node
+  linkType: hard
+
+"graceful-fs@npm:^4.1.11, graceful-fs@npm:^4.1.15, graceful-fs@npm:^4.2.6":
   version: 4.2.8
   resolution: "graceful-fs@npm:4.2.8"
   checksum: 5d224c8969ad0581d551dfabdb06882706b31af2561bd5e2034b4097e67cc27d05232849b8643866585fd0a41c7af152950f8776f4dd5579e9853733f31461c6
@@ -8932,13 +8939,13 @@ fsevents@~2.3.2:
   linkType: hard
 
 "mongodb@npm:^3.5.4":
-  version: 3.7.0
-  resolution: "mongodb@npm:3.7.0"
+  version: 3.7.3
+  resolution: "mongodb@npm:3.7.3"
   dependencies:
     bl: ^2.2.1
     bson: ^1.1.4
     denque: ^1.4.1
-    optional-require: ^1.0.3
+    optional-require: ^1.1.8
     safe-buffer: ^5.1.2
     saslprep: ^1.0.0
   dependenciesMeta:
@@ -8957,7 +8964,7 @@ fsevents@~2.3.2:
       optional: true
     snappy:
       optional: true
-  checksum: 41d27e3edc2c7baa6406b2c67cf6787c2ac4ff179e427d839bf2cfbd637ceea283fa6364ec4cf0ede3f5e3885dc83e230d6a2e26635e7ad1382a17a91d15a639
+  checksum: ef7690fe6ee7d1752f121b14e59b3fabfddc60ff0536babce6c945703ad0010de9e6fa7de4c91b99275c256876a72a06899ce27893aba0838c2b542088bd1044
   languageName: node
   linkType: hard
 
@@ -9510,12 +9517,21 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"optional-require@npm:^1.0.2, optional-require@npm:^1.0.3":
+"optional-require@npm:^1.0.2":
   version: 1.1.7
   resolution: "optional-require@npm:1.1.7"
   dependencies:
     require-at: ^1.0.6
   checksum: a4856e8702c581b42dde32e6348f5be88faaa5f2ae7747be5d187bfed5aedd2d19de3247a8f800477268a0508a240029cff7555fabce9f2802328384b285e814
+  languageName: node
+  linkType: hard
+
+"optional-require@npm:^1.1.8":
+  version: 1.1.8
+  resolution: "optional-require@npm:1.1.8"
+  dependencies:
+    require-at: ^1.0.6
+  checksum: 437db76f713052925185ae80837b593877f75101154e8937f50d33b0b07bd500c214efc9016748642109b6e3e1197eb0513a2963eb06bcf3890f88a2724b1c87
   languageName: node
   linkType: hard
 
